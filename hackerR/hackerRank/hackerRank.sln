@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzSignalR", "AzSignalR\AzSi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilitiesLib", "UtilitiesLib\UtilitiesLib.csproj", "{3A1EEF0A-702F-4630-8D36-FC4BE8567AA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMap", "MultiMap\MultiMap.csproj", "{D0676237-544D-4C70-85A8-85E36C512764}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaygroundConsole", "PlaygroundConsole\PlaygroundConsole.csproj", "{D0676237-544D-4C70-85A8-85E36C512764}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
