@@ -8,13 +8,12 @@ public static class Program
     {
         var input = "";
         int choice = Int32.MaxValue;
-        Console.WriteLine($"Enter choice {Environment.NewLine} 1-MultiMap {Environment.NewLine} 2-Reverse");
+        Console.WriteLine($"Enter choice {Environment.NewLine} 1-MultiMap {Environment.NewLine} 2-Reverse {Environment.NewLine} 3-FizzBuzz");
         input =  Console.ReadLine();
 
         while (!int.TryParse(input, out choice) && choice <= 2)
         {
-            Console.WriteLine($"Enter choice {Environment.NewLine} 1-MultiMap {Environment.NewLine} 2-Reverse");
-            
+            Console.WriteLine($"Enter choice {Environment.NewLine} 1-MultiMap {Environment.NewLine} 2-Reverse {Environment.NewLine} 3-FizzBuzz");
         }
 
         Console.WriteLine(choice);
@@ -56,7 +55,14 @@ public static class Program
             case 2:
                 Console.WriteLine("Enter input:");
                 var enteredInput = Console.ReadLine();
-                Console.WriteLine($"Input: {enteredInput} {Environment.NewLine}Reversed: {Reverser.Output(enteredInput!)}");
+                //regular reverse
+                Console.WriteLine($"Input: {enteredInput} {Environment.NewLine}Reversed: {Reverser.Output(enteredInput!)} {Environment.NewLine} {Reverser.OnlyAlphabetical(enteredInput!)}");
+                break;
+            
+            case 3: 
+                Console.WriteLine("Enter input:");
+                var num = Console.ReadLine() ?? string.Empty;
+                Console.WriteLine(AlgoDaily.FizzBuzz(int.TryParse(num, out int number) ? number : 0));
                 break;
             
             default: break;
