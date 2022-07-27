@@ -1,4 +1,5 @@
 ﻿using PlaygroundConsole.Modules;
+using PlaygroundConsole.Sorting;
 
 namespace PlaygroundConsole;
 
@@ -6,6 +7,38 @@ public static class Program
 {
     private static void Main()
     {
+        Console.WriteLine("UnsortedArray");
+        var unsortedArray = new[] {4, 1, 8, 5, 3, 6};
+        foreach (var i in unsortedArray)
+            Console.Write($"{i} --> ");
+        
+        Console.WriteLine($"{Environment.NewLine}BubbleSort");
+        var sortedArray = new BubbleSort().Sort(unsortedArray);
+        foreach (var i in sortedArray)
+            Console.Write($"{i} --> ");
+        
+        Console.WriteLine($"{Environment.NewLine}MergeSort");
+        var mergeSortedArray = new MergeSort().Sort(unsortedArray);
+        foreach (var i in mergeSortedArray)
+            Console.Write($"{i} --> ");
+        
+        Console.WriteLine($"{Environment.NewLine}InsertionSort");
+        var insertionSortedArray = new InsertionSort().Sort(unsortedArray);
+        foreach (var i in insertionSortedArray)
+            Console.Write($"{i} --> ");
+        
+        Console.WriteLine($"{Environment.NewLine}SelectionSort");
+        var selectionSortedArray = new SelectionSort().Sort(unsortedArray);
+        foreach (var i in selectionSortedArray)
+            Console.Write($"{i} --> ");
+        Console.ReadKey();
+        
+        
+        Console.WriteLine("ArrayList");
+        var arr = new ArrayListImplementation().GenerateArrayList();
+        foreach (var item in arr)
+            Console.WriteLine(item);
+        
         var input = "";
         int choice = Int32.MaxValue;
         Console.WriteLine($"Enter choice {Environment.NewLine} 1-MultiMap {Environment.NewLine} 2-Reverse {Environment.NewLine} 3-FizzBuzz");
