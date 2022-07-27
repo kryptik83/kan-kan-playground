@@ -26,13 +26,13 @@ public class MergeSort: ISort
         return arr;
     }
 
-    private int[] Merge(int[] arr, int left, int mid, int right)
+    private void Merge(int[] arr, int left, int mid, int right)
     {
         var i = left;
         var j = mid + 1;
         var k = 0;
 
-        var temp = new int[arr.Length];
+        var temp = new int[right - left + 1];
         while (i <= mid && j <= right)
         {
             if (arr[i] <= arr[j])
@@ -63,7 +63,8 @@ public class MergeSort: ISort
             j++;
             k++;
         }
-
-        return temp;
+        
+        for (var anotherIndex = left; anotherIndex <= right; anotherIndex++)
+            arr[anotherIndex] = temp[anotherIndex - left];
     }
 }

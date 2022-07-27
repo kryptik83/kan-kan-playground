@@ -18,19 +18,29 @@ public static class Program
             Console.Write($"{i} --> ");
         
         Console.WriteLine($"{Environment.NewLine}MergeSort");
-        var mergeSortedArray = new MergeSort().Sort(unsortedArray);
+        var mergeUnsortedArray = new[] {4, 1, 8, 5, 3, 6};
+        var mergeSortedArray = new MergeSort().Sort(mergeUnsortedArray);
         foreach (var i in mergeSortedArray)
             Console.Write($"{i} --> ");
         
         Console.WriteLine($"{Environment.NewLine}InsertionSort");
-        var insertionSortedArray = new InsertionSort().Sort(unsortedArray);
+        var insertionUnsortedArray = new[] {4, 1, 8, 5, 3, 6};
+        var insertionSortedArray = new InsertionSort().Sort(insertionUnsortedArray);
         foreach (var i in insertionSortedArray)
             Console.Write($"{i} --> ");
         
         Console.WriteLine($"{Environment.NewLine}SelectionSort");
-        var selectionSortedArray = new SelectionSort().Sort(unsortedArray);
+        var selectionUnsortedArray = new[] {4, 1, 8, 5, 3, 6};
+        var selectionSortedArray = new SelectionSort().Sort(selectionUnsortedArray);
         foreach (var i in selectionSortedArray)
             Console.Write($"{i} --> ");
+        
+        Console.WriteLine($"{Environment.NewLine}QuickSort");
+        var quickUnsortedArray = new[] {4, 1, 8, 5, 3, 6};
+        var quickSortedArray = new QuickSort().Sort(quickUnsortedArray);
+        foreach (var i in quickSortedArray)
+            Console.Write($"{i} --> ");
+
         Console.ReadKey();
         
         
