@@ -1,5 +1,8 @@
-﻿using PlaygroundConsole.Modules;
+﻿using PlaygroundConsole.DataStructures;
+using PlaygroundConsole.Modules;
+using PlaygroundConsole.Search;
 using PlaygroundConsole.Sorting;
+using Math = System.Math;
 
 namespace PlaygroundConsole;
 
@@ -7,6 +10,48 @@ public static class Program
 {
     private static void Main()
     {
+        /*
+                A
+               / \
+              B   D
+             /   / \
+            C   E   F
+         */
+        var myTree = new Tree<string>("A");
+        myTree.Root.AddLeft("B").AddLeft("C");
+        var right = myTree.Root.AddRight("D");
+        right.AddLeft("E");
+        right.AddRight("F");
+        
+        TreeSearch<string>.BFS(myTree);
+
+        Console.WriteLine($"{Environment.NewLine}DFS");
+        TreeSearch<string>.DFS(myTree.Root);
+
+        Console.ReadLine();
+
+        // Dictionary<int, int> dict = new();
+        // dict[1] = 1;
+        // Console.Write(dict[1]);
+        // Console.ReadLine();
+        
+        int[] arrWithDupes = new[] {1, 2, 3, 3, 3, 3, 3, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7};
+        var uniqueItemCount = 0;
+        for (var ix = 0; ix < arrWithDupes.Length; ix++)
+        {
+            if (ix == 0 || arrWithDupes[ix] != arrWithDupes[ix - 1])
+            {
+                arrWithDupes[uniqueItemCount] = arrWithDupes[ix];
+                uniqueItemCount++;
+            }
+            else if (arrWithDupes[ix] == arrWithDupes[ix - 1]) continue;
+        }
+        Console.WriteLine(uniqueItemCount);
+        Console.ReadLine();
+        
+        Console.WriteLine(MyMath.ExtraLongFactorial(100));
+        Console.ReadLine();
+        
         Console.WriteLine("UnsortedArray");
         var unsortedArray = new[] {4, 1, 8, 5, 3, 6};
         foreach (var i in unsortedArray)
@@ -41,6 +86,11 @@ public static class Program
         foreach (var i in quickSortedArray)
             Console.Write($"{i} --> ");
 
+        Console.WriteLine($"{Environment.NewLine}HeapSort");
+        var heapUnsortedArray = new[] {4, 1, 8, 5, 3, 6};
+        var heapSortedArray = new QuickSort().Sort(heapUnsortedArray);
+        foreach (var i in heapSortedArray)
+            Console.Write($"{i} --> ");
         Console.ReadKey();
         
         
