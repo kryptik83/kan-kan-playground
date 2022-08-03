@@ -1,5 +1,6 @@
 ﻿using PlaygroundConsole.DataStructures;
 using PlaygroundConsole.Modules;
+using PlaygroundConsole.Practice.AlgoDaily;
 using PlaygroundConsole.Practice.Codility;
 using PlaygroundConsole.Search;
 using PlaygroundConsole.Sorting;
@@ -11,6 +12,14 @@ public static class Program
 {
     private static void Main()
     {
+        var randNumberCollections = new[] {1, 4, 6, 7, 6, 4, 1};
+        Console.WriteLine($"Lone Ranger for {string.Join(",", randNumberCollections)}: {LoneRanger.Get(randNumberCollections)}");
+        randNumberCollections = new[] {3, 3, 9};
+        Console.WriteLine($"Lone Ranger for {string.Join(",", randNumberCollections)}: {LoneRanger.Get(randNumberCollections)}");
+        randNumberCollections = new[] {3, 3, 3};
+        Console.WriteLine($"Lone Ranger for {string.Join(",", randNumberCollections)}: {LoneRanger.Get(randNumberCollections)}");
+
+        Console.ReadLine();
         while(true)
         {
             Console.WriteLine("Enter a number: ");

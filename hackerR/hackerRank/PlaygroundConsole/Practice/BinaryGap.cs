@@ -1,10 +1,10 @@
-// ReSharper disable once CheckNamespace
 using System.Collections;
 using System.Text;
 
+// ReSharper disable once CheckNamespace
 namespace PlaygroundConsole.Practice.Codility;
 
-public class BinaryGap
+public static class BinaryGap
 {
     public static (string BinaryRepresentation, int BiggestGap) FindBiggest(int number)
     {
