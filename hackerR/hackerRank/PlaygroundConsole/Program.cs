@@ -1,5 +1,6 @@
 ﻿using PlaygroundConsole.DataStructures;
 using PlaygroundConsole.Modules;
+using PlaygroundConsole.Practice.Codility;
 using PlaygroundConsole.Search;
 using PlaygroundConsole.Sorting;
 using Math = System.Math;
@@ -10,6 +11,17 @@ public static class Program
 {
     private static void Main()
     {
+        while(true)
+        {
+            Console.WriteLine("Enter a number: ");
+            var inp = Console.ReadLine();
+            var numberMila = Int32.TryParse(inp, out var numero);
+            if (!numberMila && inp == "q") break;
+            var result = BinaryGap.FindBiggest(numero);
+            Console.WriteLine($"Number ==> {numero}{Environment.NewLine}Binary ==> {result.BinaryRepresentation}{Environment.NewLine}" + $"Biggest gap ==> {result.BiggestGap}");
+            Console.WriteLine();
+        }
+
         /*
                 A
                / \
