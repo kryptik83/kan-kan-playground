@@ -12,6 +12,13 @@ public static class Program
 {
     private static void Main()
     {
+        var intArray = new int[500];
+        for (var x = 0; x < intArray.Length; x++) intArray[x] = x + 1;
+        intArray.RightRotate(214);
+        Console.WriteLine(intArray[76]);
+        Console.WriteLine(intArray[39]);
+        Console.ReadLine();
+        
         var randNumberCollections = new[] {1, 4, 6, 7, 6, 4, 1};
         Console.WriteLine($"Lone Ranger for {string.Join(",", randNumberCollections)}: {LoneRanger.Get(randNumberCollections)}");
         randNumberCollections = new[] {3, 3, 9};
