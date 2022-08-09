@@ -4,7 +4,6 @@ using PlaygroundConsole.Practice.AlgoDaily;
 using PlaygroundConsole.Practice.Codility;
 using PlaygroundConsole.Search;
 using PlaygroundConsole.Sorting;
-using Math = System.Math;
 
 namespace PlaygroundConsole;
 

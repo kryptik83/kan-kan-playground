@@ -1,7 +1,7 @@
 // ReSharper disable once CheckNamespace
 namespace PlaygroundConsole.Practice.AlgoDaily;
 
-public class LoneRanger
+public static class LoneRanger
 {
     public static int Get(int[] numbers)
     {

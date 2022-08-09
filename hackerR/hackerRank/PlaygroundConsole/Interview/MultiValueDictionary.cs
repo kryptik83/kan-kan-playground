@@ -6,7 +6,7 @@ namespace PlaygroundConsole.Interview.ServiceTitan;
 
 public class MultiValueDictionary<K, V> : IMultiValueDictionary<K, V> where K : notnull
 {
-    private Dictionary<K, HashSet<V>> _dictionary = new();
+    private readonly Dictionary<K, HashSet<V>> _dictionary = new();
 
     public IEnumerator<KeyValuePair<K, V>> GetEnumerator() => Flatten()
         .GetEnumerator();

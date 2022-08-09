@@ -2,7 +2,7 @@ using System.Numerics;
 
 namespace PlaygroundConsole.Modules;
 
-public class MyMath
+public static class MyMath
 {
     public static BigInteger ExtraLongFactorial(int n)
     {
