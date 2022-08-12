@@ -38,7 +38,7 @@ public class Node
 }
 
 [TestFixture]
-public class Tests
+public partial class Tests
 {
     private Node? _tree0;
     private Node? _tree2;

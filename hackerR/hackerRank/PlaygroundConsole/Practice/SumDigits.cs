@@ -21,7 +21,7 @@ public static class Test
 }
 
 [TestFixture]
-class Tests
+public partial class Tests
 {
     [Test]
     public void testOne()
