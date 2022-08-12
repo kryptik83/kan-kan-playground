@@ -1,4 +1,4 @@
-﻿
+
 using System.Text;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
@@ -18,7 +18,7 @@ internal class Program
         static async Task ProcessAsync()
         {
             // Copy the connection string from the portal in the variable below.
-            string storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=az204blobstrgacct;AccountKey=ZS+7Z9F7QjYC7zo76RcBjZSWgvxphqR3pX+dmxrt7iJHEO1h/OweK4JusAnCecUmGOMkgZp79coc+AStprnKKA==;EndpointSuffix=core.windows.net";
+            string storageConnectionString = "<<storage connection string here>>";
 
             // Create a client that can authenticate with a connection string
             BlobServiceClient blobServiceClient = new BlobServiceClient(storageConnectionString);
