@@ -1,5 +1,3 @@
-using NUnit.Framework;
-
 namespace PlaygroundConsole;
 
 public static class FirstNonRepeatingCharacter
@@ -15,36 +13,5 @@ public static class FirstNonRepeatingCharacter
                 return key;
 
         return default;
-    }
-}
-
-[TestFixture]
-public partial class Tests
-{
-    [Test]
-    public void WhereIsMyCarTest()
-    {
-        Assert.AreEqual(FirstNonRepeatingCharacter.Solve("oh my god dude where is my car"), 'g');
-    }
-
-    [Test]
-    public void EmptyStringTest()
-    {
-        Assert.AreEqual(FirstNonRepeatingCharacter.Solve(""), '\0');
-    }
-
-
-    [Test]
-    public void RandomStrTest()
-    {
-        // ReSharper disable once StringLiteralTypo
-        Assert.AreEqual(FirstNonRepeatingCharacter.Solve("asdfsdafdasfjdfsafnnunlfdffvxcvsfansd"), 'j');
-    }
-
-
-    [Test]
-    public void SingleCharStringTest()
-    {
-        Assert.AreEqual(FirstNonRepeatingCharacter.Solve("a"), 'a');
     }
 }

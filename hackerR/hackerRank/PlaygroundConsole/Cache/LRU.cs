@@ -36,7 +36,7 @@ public class LRU
         }
         else
         {
-            if (_list.Count >= this._size)
+            if (_list.Count >= _size)
             {
                 var nodeToRemove = _list.First;
                 if (nodeToRemove != null)
