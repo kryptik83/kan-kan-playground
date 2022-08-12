@@ -49,7 +49,7 @@ public class MergeSort: ISort
             k++;
         }
 
-        //ran out of one of the wo sub arrays - append the rest
+        //ran out of one of the two sub arrays - append the rest
         while (i <= mid)
         {
             temp[k] = arr[i];

@@ -9,7 +9,7 @@ public class QuickSort : ISort
         return QuickSortInternal(arr, 0, arr.Length - 1);
     }
 
-    private int[] QuickSortInternal(int[] arr, int left, int right)
+    private static int[] QuickSortInternal(int[] arr, int left, int right)
     {
         var pivotIndex = GetPivotIndex(arr, left, right);
         if (pivotIndex > 1)
@@ -21,7 +21,7 @@ public class QuickSort : ISort
         return arr;
     }
 
-    private int GetPivotIndex(int[] arr, int left, int right)
+    private static int GetPivotIndex(int[] arr, int left, int right)
     {
         var pivot = arr[left];
         while (true)

@@ -1,5 +1,3 @@
-using NUnit.Framework;
-
 namespace PlaygroundConsole;
 
 public static class DollarSignDeletion
@@ -29,37 +27,5 @@ public static class DollarSignDeletion
             computedFinalString = stack.Pop() + computedFinalString;
 
         return computedFinalString;
-    }
-}
-
-// tests
-[TestFixture]
-public partial class Tests
-{
-    [Test]
-    public void MultipleDeletesEqualTest()
-    {
-        Assert.True(DollarSignDeletion.IsDollarDeleteEqual(new[] {"ab$$", "c$d$"}));
-    }
-
-
-    [Test]
-    public void SimpleDollarDeleteTest()
-    {
-        Assert.True(DollarSignDeletion.IsDollarDeleteEqual(new[] {"f$ec", "ec"}));
-    }
-
-
-    [Test]
-    public void ComplexEqualTest()
-    {
-        Assert.True(DollarSignDeletion.IsDollarDeleteEqual(new[] {"b$$p", "$b$p"}));
-    }
-
-
-    [Test]
-    public void ComplexDeletesNotEqualTest()
-    {
-        Assert.False(DollarSignDeletion.IsDollarDeleteEqual(new[] {"a90$n$c$se", "a90n$cse"}));
     }
 }
