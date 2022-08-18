@@ -1,6 +1,5 @@
 using System.Collections;
 
-// ReSharper disable once CheckNamespace
 namespace PlaygroundConsole.Practice.Codility;
 
 public static class BinaryGap
@@ -34,7 +33,7 @@ public static class BinaryGap
                 if (bin[i] == '1')
                 {
                     gap = Math.Max(gap, count);
-                    count = 0; 
+                    count = 0;
                 }
             }
         }

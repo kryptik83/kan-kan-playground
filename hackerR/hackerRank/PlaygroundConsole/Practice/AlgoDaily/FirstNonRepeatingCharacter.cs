@@ -1,4 +1,4 @@
-namespace PlaygroundConsole;
+namespace PlaygroundConsole.Practice.AlgoDaily;
 
 public static class FirstNonRepeatingCharacter
 {

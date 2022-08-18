@@ -1,6 +1,6 @@
-using PlaygroundConsole;
+using PlaygroundConsole.Practice.AlgoDaily;
 
-namespace PlaygroundConsoleTests.Practice;
+namespace PlaygroundConsoleTests.Practice.AlgoDaily;
 
 [TestFixture]
 public class FirstNonRepeatingCharacterTests

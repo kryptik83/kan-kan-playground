@@ -1,4 +1,3 @@
-// ReSharper disable once CheckNamespace
 namespace PlaygroundConsole.Practice.AlgoDaily;
 
 public static class LoneRanger

@@ -1,6 +1,6 @@
 using PlaygroundConsole.Sorting;
 
-namespace PlaygroundConsole;
+namespace PlaygroundConsole.Practice.AlgoDaily;
 
 public static class MaxOfMinPairs
 {

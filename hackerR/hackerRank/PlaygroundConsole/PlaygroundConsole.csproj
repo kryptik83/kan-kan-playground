@@ -9,5 +9,9 @@
         <AssemblyName>PlaygroundConsole</AssemblyName>
         <GenerateProgramFile>false</GenerateProgramFile>
     </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Practice" />
+    </ItemGroup>
     
 </Project>
