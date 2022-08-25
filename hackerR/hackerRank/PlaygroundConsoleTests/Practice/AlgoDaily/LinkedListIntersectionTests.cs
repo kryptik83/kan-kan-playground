@@ -26,8 +26,7 @@ public class LinkedListIntersectionTests
             Assert.That(intersectingList.First!.Value, Is.EqualTo(3));
         }
     }
-
-
+    
     [Test]
     public void IntersectionWithOneCommonElementTest()
     {
