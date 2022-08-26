@@ -6,7 +6,7 @@ namespace PlaygroundConsole.Practice.AlgoDaily;
 /// after swapping every 2 nodes: 2 -> 1 -> 4 -> 3
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public static class SwapNodePairsInLinkedList<T> where T: notnull
+public static class SwapNodePairsInLinkedList<T> where T : notnull
 {
     public static LinkedList<T>? Get(LinkedList<T> list)
     {
